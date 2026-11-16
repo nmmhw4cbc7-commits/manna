@@ -18,7 +18,6 @@ SRC = ROOT / "src"
 
 # Reihenfolge = Reihenfolge im Menü
 NAV = [
-    ("start", "index.html", "Start"),
     ("besuch", "besuch.html", "Besuch"),
     ("essen", "essen.html", "Essen & Trinken"),
     ("abende", "abende.html", "Abende"),
@@ -60,6 +59,7 @@ def main():
             .replace("{{nav}}", nav_html(active))
             .replace("{{cta_current}}", ' aria-current="page"' if active == "reservieren" else "")
             .replace("{{content}}", body.rstrip())
+            .replace("{{body_class}}", meta.get("body", ""))
         )
         (ROOT / page.name).write_text(html, encoding="utf-8")
         print(f"  ✓ {page.name}")

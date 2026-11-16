@@ -5,65 +5,59 @@ nav: besuch
 -->
     <section class="page-head">
       <div class="container">
-        <p class="eyebrow">Besuch</p>
+        <span class="label">Besuch</span>
         <h1>Zeiten &amp; Anfahrt</h1>
-        <p class="lead">Café Manna ist zwei Abende pro Woche geöffnet. Hier findest du, wann und wo.</p>
-        <p class="status" data-status hidden>
-          <span class="status-dot" aria-hidden="true"></span>
-          <span><strong data-status-text></strong> · <span data-status-detail></span></span>
-        </p>
+        <p class="lead">Café Manna ist zwei Abende in der Woche geöffnet.</p>
+        <p class="page-status" data-status hidden></p>
       </div>
     </section>
 
-    <section class="section" style="padding-top:0" aria-labelledby="zeiten">
-      <div class="container split" style="align-items:start">
+    <section class="section" style="padding-top:0">
+      <div class="container split split-top">
         <div>
-          <h2 id="zeiten">Öffnungszeiten</h2>
-          <table class="hours">
-            <caption class="visually-hidden">Öffnungszeiten Café Manna</caption>
-            <tbody>
-              <tr data-day="1"><th scope="row">Montag</th><td>geschlossen</td></tr>
-              <tr data-day="2"><th scope="row">Dienstag</th><td>geschlossen</td></tr>
-              <tr data-day="3"><th scope="row">Mittwoch</th><td>geschlossen</td></tr>
-              <tr data-day="4"><th scope="row">Donnerstag</th><td>geschlossen</td></tr>
-              <tr data-day="5" class="is-open"><th scope="row">Freitag</th><td>18 – 23 Uhr</td></tr>
-              <tr data-day="6" class="is-open"><th scope="row">Samstag</th><td>18 – 23 Uhr</td></tr>
-              <tr data-day="0"><th scope="row">Sonntag</th><td>geschlossen</td></tr>
-            </tbody>
-          </table>
-          <p class="note" style="margin-top:20px">Das Café wird ehrenamtlich betrieben. Wenn sich an einem Abend etwas ändert, steht es im <a href="https://t.me/cafemanna" rel="noopener">Telegram-Infokanal</a>.</p>
+          <h2>Öffnungszeiten</h2>
+          <div class="menu-list" role="table" aria-label="Öffnungszeiten">
+            <div role="row" data-day="1" class="closed"><span class="k" role="rowheader">Montag</span><span class="dots" aria-hidden="true"></span><span class="v" role="cell">geschlossen</span></div>
+            <div role="row" data-day="2" class="closed"><span class="k" role="rowheader">Dienstag</span><span class="dots" aria-hidden="true"></span><span class="v" role="cell">geschlossen</span></div>
+            <div role="row" data-day="3" class="closed"><span class="k" role="rowheader">Mittwoch</span><span class="dots" aria-hidden="true"></span><span class="v" role="cell">geschlossen</span></div>
+            <div role="row" data-day="4" class="closed"><span class="k" role="rowheader">Donnerstag</span><span class="dots" aria-hidden="true"></span><span class="v" role="cell">geschlossen</span></div>
+            <div role="row" data-day="5"><span class="k" role="rowheader">Freitag</span><span class="dots" aria-hidden="true"></span><span class="v" role="cell">18 – 23 Uhr</span></div>
+            <div role="row" data-day="6"><span class="k" role="rowheader">Samstag</span><span class="dots" aria-hidden="true"></span><span class="v" role="cell">18 – 23 Uhr</span></div>
+            <div role="row" data-day="0" class="closed"><span class="k" role="rowheader">Sonntag</span><span class="dots" aria-hidden="true"></span><span class="v" role="cell">geschlossen</span></div>
+          </div>
+          <p class="note">Das Café wird ehrenamtlich betrieben. Ändert sich an einem Abend etwas, steht es im <a href="https://t.me/cafemanna" rel="noopener">Telegram-Infokanal</a>.</p>
         </div>
 
         <div>
           <h2>Adresse</h2>
-          <ul class="contact-list">
-            <li>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
-              <span>Café Manna<br>Boschstraße 26<br>67346 Speyer<br><span class="muted small">Im Gebäude des CDH-Stephanus e.V.</span></span>
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>
-              <span><a href="tel:+4915754260456">0157 54260456</a><br><span class="muted small">Für Reservierungen, auch per WhatsApp</span></span>
-            </li>
-          </ul>
-          <h3 style="margin-top:28px">Route öffnen</h3>
-          <div class="btn-row" style="margin-top:12px">
-            <a class="btn btn-secondary btn-small" href="https://maps.apple.com/?q=Café+Manna&amp;address=Boschstraße+26,+67346+Speyer" rel="noopener">Apple Karten</a>
-            <a class="btn btn-secondary btn-small" href="https://www.google.com/maps/search/?api=1&amp;query=Boschstra%C3%9Fe+26%2C+67346+Speyer" rel="noopener">Google Maps</a>
-            <a class="btn btn-secondary btn-small" href="https://www.openstreetmap.org/search?query=Boschstra%C3%9Fe%2026%2C%2067346%20Speyer" rel="noopener">OpenStreetMap</a>
+          <address class="contact-block">
+            <strong>Café Manna</strong>
+            Boschstraße 26<br>
+            67346 Speyer<br>
+            <span class="muted small">im Gebäude des CDH-Stephanus e.V.</span>
+          </address>
+          <div class="map-links">
+            <a class="text-link" href="https://maps.apple.com/?q=Café+Manna&amp;address=Boschstraße+26,+67346+Speyer" rel="noopener">Apple Karten</a>
+            <a class="text-link" href="https://www.google.com/maps/search/?api=1&amp;query=Boschstra%C3%9Fe+26%2C+67346+Speyer" rel="noopener">Google Maps</a>
+            <a class="text-link" href="https://www.openstreetmap.org/search?query=Boschstra%C3%9Fe%2026%2C%2067346%20Speyer" rel="noopener">OpenStreetMap</a>
           </div>
-          <p class="muted small" style="margin-top:12px">Wir binden absichtlich keine Karte ein – so werden beim Laden der Seite keine Daten an Kartendienste übertragen.</p>
+
+          <h2 style="margin-top:3rem">Reservierung</h2>
+          <p class="contact-block" style="margin:0"><a href="tel:+4915754260456">0157 54260456</a><br><span class="muted small">Telefon oder WhatsApp – oder <a href="reservieren.html">online</a></span></p>
         </div>
       </div>
     </section>
 
-    <section class="section section-alt" aria-labelledby="faq">
+    <section class="section section-tint">
       <div class="container narrow">
-        <h2 id="faq">Häufige Fragen</h2>
+        <div class="center" style="margin-bottom:2.5rem">
+          <span class="label">Fragen</span>
+          <h2>Bevor du kommst</h2>
+        </div>
         <div class="faq">
           <details>
-            <summary>Muss ich zur Gemeinde gehören oder Christ sein?</summary>
-            <div><p>Nein. Das Café wird von Menschen aus einer christlichen Gemeinde betrieben, aber jeder ist willkommen – ausdrücklich auch Gäste, die niemanden dort kennen.</p></div>
+            <summary>Muss ich zur Gemeinde gehören?</summary>
+            <div><p>Nein. Das Café wird von Menschen aus einer christlichen Gemeinde betrieben, aber jeder ist willkommen – ausdrücklich auch Gäste, die dort niemanden kennen.</p></div>
           </details>
           <details>
             <summary>Was kostet das Essen?</summary>
@@ -75,11 +69,11 @@ nav: besuch
           </details>
           <details>
             <summary>Kann ich das Café für eine Feier nutzen?</summary>
-            <div><p>Ja, der Raum kann auch für Familienfeiern und andere Veranstaltungen genutzt werden. Frag am besten telefonisch oder per WhatsApp unter <a href="tel:+4915754260456">0157 54260456</a> nach.</p></div>
+            <div><p>Ja, der Raum kann auch für Familienfeiern und andere Veranstaltungen genutzt werden. Frag einfach unter <a href="tel:+4915754260456">0157 54260456</a> nach.</p></div>
           </details>
           <details>
             <summary>Wo erfahre ich von besonderen Abenden?</summary>
-            <div><p>Im <a href="https://t.me/cafemanna" rel="noopener">Telegram-Infokanal</a> und auf <a href="https://instagram.com/cafemanna.ev" rel="noopener">Instagram (@cafemanna.ev)</a>. Einen Überblick gibt es unter <a href="abende.html">Abende</a>.</p></div>
+            <div><p>Im <a href="https://t.me/cafemanna" rel="noopener">Telegram-Infokanal</a> und auf <a href="https://instagram.com/cafemanna.ev" rel="noopener">Instagram</a>. Einen Überblick gibt es unter <a href="abende.html">Abende</a>.</p></div>
           </details>
         </div>
       </div>
