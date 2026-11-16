@@ -40,7 +40,7 @@
   function statusText() {
     var now = berlinNow();
     var t = HOURS[now.day];
-    if (t && now.minutes >= t[0] * 60 && now.minutes < t[1] * 60) return "Jetzt geöffnet – bis " + t[1] + " Uhr";
+    if (t && now.minutes >= t[0] * 60 && now.minutes < t[1] * 60) return "Jetzt geöffnet bis " + t[1] + " Uhr";
     if (t && now.minutes < t[0] * 60) return "Heute ab " + t[0] + " Uhr geöffnet";
     for (var i = 1; i <= 7; i++) {
       var d = (now.day + i) % 7;
