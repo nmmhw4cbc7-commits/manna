@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>{{title}}</title>
+  <meta name="description" content="{{description}}">
+  <meta name="theme-color" content="#f7f5f0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#141210" media="(prefers-color-scheme: dark)">
+  <meta property="og:title" content="{{title}}">
+  <meta property="og:description" content="{{description}}">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:image" content="assets/img/innen-2.jpg">
+  <link rel="icon" href="assets/img/logo-400.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/img/logo-400.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CafeOrCoffeeShop",
+    "name": "Café Manna",
+    "description": "Ehrenamtlich betriebenes Abendcafé in Speyer. Warme Gerichte, Kaffee und Kuchen gegen Spende.",
+    "address": { "@type": "PostalAddress", "streetAddress": "Boschstraße 26", "postalCode": "67346", "addressLocality": "Speyer", "addressCountry": "DE" },
+    "telephone": "+4915754260456",
+    "openingHoursSpecification": [{ "@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday", "Saturday"], "opens": "18:00", "closes": "23:00" }],
+    "acceptsReservations": true,
+    "sameAs": ["https://instagram.com/cafemanna.ev", "https://t.me/cafemanna"]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Café Manna – Startseite">
+        <span class="brand-mark" aria-hidden="true">M</span>
+        <span>Café Manna</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menü öffnen">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Hauptnavigation">
+        <ul class="nav-list">
+          {{nav}}
+          <li class="nav-cta"><a class="btn btn-primary btn-small" href="reservieren.html"{{cta_current}}>Tisch reservieren</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+{{content}}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h2>Café Manna</h2>
+          <address>
+            Boschstraße 26<br>
+            67346 Speyer
+          </address>
+          <p class="muted small" style="margin-top:12px">Ehrenamtlich betrieben vom Café Manna e.V.<br>im Gebäude des CDH-Stephanus e.V.</p>
+        </div>
+        <div>
+          <h2>Geöffnet</h2>
+          <p class="muted">Freitag &amp; Samstag<br>18 – 23 Uhr</p>
+        </div>
+        <div>
+          <h2>Kontakt</h2>
+          <ul>
+            <li><a href="tel:+4915754260456">0157 54260456</a></li>
+            <li><a href="https://wa.me/4915754260456" rel="noopener">WhatsApp</a></li>
+            <li><a href="https://t.me/cafemanna" rel="noopener">Telegram-Infokanal</a></li>
+            <li><a href="https://instagram.com/cafemanna.ev" rel="noopener">Instagram</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Seiten</h2>
+          <ul>
+            <li><a href="besuch.html">Besuch &amp; Anfahrt</a></li>
+            <li><a href="essen.html">Essen &amp; Trinken</a></li>
+            <li><a href="abende.html">Abende</a></li>
+            <li><a href="ueber-uns.html">Über uns</a></li>
+            <li><a href="reservieren.html">Reservieren</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> Café Manna e.V.</span>
+        <span><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
