@@ -6,23 +6,25 @@
   <title>{{title}}</title>
   <meta name="description" content="{{description}}">
   <meta name="theme-color" content="#f0ede7">
-  <link rel="preload" href="assets/fonts/bodoni-moda-latin-400-italic.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="assets/fonts/jost-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <meta property="og:title" content="{{title}}">
   <meta property="og:description" content="{{description}}">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="de_DE">
-  <meta property="og:image" content="assets/img/innen-2.jpg">
+  <meta property="og:image" content="assets/img/raum-breit.jpg">
   <link rel="icon" href="assets/img/logo-mark.png" type="image/png">
   <link rel="apple-touch-icon" href="assets/img/logo-mark.png">
+  <link rel="preload" href="assets/fonts/bodoni-moda-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/bodoni-moda-latin-400-italic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/jost-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add("js");</script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "CafeOrCoffeeShop",
     "name": "Café Manna",
     "slogan": "Wo Genuss Gutes tut.",
-    "description": "Ehrenamtlich betriebenes Abendcafé in Speyer. Warme Gerichte, Kaffee und Kuchen gegen Spende.",
+    "description": "Ehrenamtlich betriebenes Abendcafé in Speyer mit warmen Gerichten, Kaffee und Kuchen auf Spendenbasis.",
     "address": { "@type": "PostalAddress", "streetAddress": "Boschstraße 26", "postalCode": "67346", "addressLocality": "Speyer", "addressCountry": "DE" },
     "telephone": "+4915754260456",
     "openingHoursSpecification": [{ "@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday", "Saturday"], "opens": "18:00", "closes": "23:00" }],
@@ -35,19 +37,32 @@
   <a class="skip-link" href="#main">Zum Inhalt springen</a>
 
   <header class="site-header">
-    <div class="container header-inner">
+    <div class="header-inner">
+      <nav class="nav-side nav-left" aria-label="Hauptnavigation">
+        <ul>
+          {{nav_left}}
+        </ul>
+      </nav>
       <a class="brand" href="index.html" aria-label="Café Manna, zur Startseite">
         <img src="assets/img/logo-mark.png" width="480" height="480" alt="Café Manna">
       </a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menü</button>
-      <nav id="site-nav" class="site-nav" aria-label="Hauptnavigation">
-        <ul class="nav-list">
-          {{nav}}
-          <li class="nav-cta"><a href="reservieren.html"{{cta_current}}>Reservieren</a></li>
+      <nav class="nav-side nav-right" aria-label="Weitere Navigation">
+        <ul>
+          {{nav_right}}
+          <li><a class="nav-cta" href="reservieren.html"{{cta_current}}>Reservieren</a></li>
         </ul>
       </nav>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav">Menü</button>
     </div>
   </header>
+
+  <div class="mobile-nav" id="mobile-nav" hidden>
+    <ul>
+      {{nav_mobile}}
+    </ul>
+    <a class="btn btn-solid" href="reservieren.html">Tisch reservieren</a>
+    <p class="mobile-nav-info">Freitag und Samstag, 18 bis 23 Uhr<br>Boschstraße 26, 67346 Speyer</p>
+  </div>
 
   <main id="main">
 {{content}}
@@ -55,36 +70,41 @@
 
   <footer class="site-footer">
     <div class="container">
-      <img class="logo" src="assets/img/logo-mark.png" width="480" height="480" alt="Café Manna" loading="lazy">
-      <p class="footer-slogan">Wo Genuss Gutes tut.</p>
-      <div class="footer-cols">
-        <div>
-          <h2>Adresse</h2>
-          <address>Boschstraße 26<br>67346 Speyer</address>
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="assets/img/logo-mark.png" width="480" height="480" alt="Café Manna" loading="lazy">
+          <p class="footer-slogan">Wo Genuss Gutes tut.</p>
         </div>
-        <div>
-          <h2>Geöffnet</h2>
-          <p style="margin:0">Freitag und Samstag<br>18 bis 23 Uhr</p>
-        </div>
-        <div>
-          <h2>Kontakt</h2>
-          <ul>
-            <li><a href="tel:+4915754260456">0157 54260456</a></li>
-            <li><a href="https://wa.me/4915754260456" rel="noopener">WhatsApp</a> · <a href="https://t.me/cafemanna" rel="noopener">Telegram</a></li>
-            <li><a href="https://instagram.com/cafemanna.ev" rel="noopener">@cafemanna.ev</a></li>
-          </ul>
+        <div class="footer-cols">
+          <div>
+            <h2>Besuch</h2>
+            <address>Boschstraße 26<br>67346 Speyer</address>
+            <p>Freitag und Samstag<br>18 bis 23 Uhr</p>
+          </div>
+          <div>
+            <h2>Kontakt</h2>
+            <ul>
+              <li><a href="tel:+4915754260456">0157 54260456</a></li>
+              <li><a href="https://wa.me/4915754260456" rel="noopener">WhatsApp</a></li>
+              <li><a href="https://t.me/cafemanna" rel="noopener">Telegram-Infokanal</a></li>
+              <li><a href="https://instagram.com/cafemanna.ev" rel="noopener">Instagram</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2>Seiten</h2>
+            <ul>
+              <li><a href="besuch.html">Besuch</a></li>
+              <li><a href="essen.html">Essen &amp; Trinken</a></li>
+              <li><a href="abende.html">Abende</a></li>
+              <li><a href="ueber-uns.html">Über uns</a></li>
+              <li><a href="reservieren.html">Reservieren</a></li>
+            </ul>
+          </div>
         </div>
       </div>
-      <ul class="footer-nav">
-        <li><a href="besuch.html">Besuch</a></li>
-        <li><a href="essen.html">Essen &amp; Trinken</a></li>
-        <li><a href="abende.html">Abende</a></li>
-        <li><a href="ueber-uns.html">Über uns</a></li>
-        <li><a href="reservieren.html">Reservieren</a></li>
-      </ul>
       <div class="footer-bottom">
-        <span>© <span data-year>2026</span> Café Manna e.V. · ehrenamtlich betrieben</span>
-        <span><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></span>
+        <span>© <span data-year>2026</span> Café Manna e.V., ehrenamtlich betrieben im Gebäude des CDH-Stephanus e.V.</span>
+        <span class="footer-legal"><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></span>
       </div>
     </div>
   </footer>

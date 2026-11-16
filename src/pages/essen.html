@@ -4,57 +4,66 @@ description: Im Café Manna in Speyer gibt es warme Gerichte, Getränke, Kaffee 
 nav: essen
 -->
     <section class="page-head">
-      <div class="container">
-        <span class="label">Unsere Küche</span>
-        <h1>Essen &amp; Trinken</h1>
-        <p class="lead">Bei uns erwarten dich leckere Gerichte, die frisch und mit viel Liebe zubereitet werden. Dazu gibt es kalte und warme Getränke, Kaffee und Kuchen.</p>
+      <div class="container grid">
+        <div class="title-col reveal">
+          <span class="eyebrow">Unsere Küche</span>
+          <h1 class="d2">Essen &amp; Trinken</h1>
+        </div>
+        <div class="lead-col reveal reveal-d1">
+          <p class="lead">Bei uns erwarten dich leckere Gerichte, die frisch und mit viel Liebe zubereitet werden. Dazu gibt es kalte und warme Getränke, Kaffee und Kuchen.</p>
+        </div>
       </div>
     </section>
+
+    <div class="container banner reveal">
+      <div class="img">
+        <img src="assets/img/raum-gross.webp" width="1280" height="853" style="object-position:50% 62%"
+             alt="Zwei Teller mit gegrillten Sandwiches, Pommes und einer Schale buntem Salat.">
+      </div>
+    </div>
 
     <section class="section" style="padding-top:0">
-      <div class="container split">
-        <div class="arch-wrap">
-          <div class="arch arch-tall">
-            <img src="assets/img/raum-gross.webp" width="1280" height="853"
-                 alt="Zwei Teller: ein gegrilltes Sandwich mit Pommes und ein Vollkorn-Sandwich mit Ei und Salat, dahinter eine Schale mit buntem Salat." style="object-position:72% 50%">
-          </div>
+      <div class="container grid">
+        <div class="reveal" style="grid-column:1 / span 4">
+          <span class="eyebrow"><span class="num">01</span>Die Karte</span>
+          <h2 class="h2">Was es bei uns gibt</h2>
+          <p class="muted" style="margin-top:20px">Unsere Karte wechselt, und die aktuelle findest du abends bei dir am Tisch.</p>
         </div>
-        <div>
-          <span class="label">Die Karte</span>
-          <h2>Was es gibt</h2>
-          <div class="menu-list">
-            <div><span class="k">Hauptgerichte</span><span class="dots" aria-hidden="true"></span><span class="v">warm</span></div>
-          </div>
-          <p class="muted small" style="margin-top:-4px">Zum Beispiel gegrillte Sandwiches mit Salat oder Pommes.</p>
-          <div class="menu-list">
-            <div><span class="k">Getränke</span><span class="dots" aria-hidden="true"></span><span class="v">kalt und warm</span></div>
-          </div>
-          <p class="muted small" style="margin-top:-4px">Limonaden, Kaffee und andere Heißgetränke.</p>
-          <div class="menu-list">
-            <div><span class="k">Kaffee &amp; Kuchen</span><span class="dots" aria-hidden="true"></span><span class="v">den ganzen Abend</span></div>
-          </div>
-          <p class="muted small" style="margin-top:-4px">Du bist auch gern einfach auf ein Stück Kuchen willkommen.</p>
-          <p class="note">Dazu kommen wechselnde Specials, und die aktuelle Karte findest du bei dir am Tisch.</p>
+        <div class="reveal reveal-d1" style="grid-column:6 / span 7">
+          <dl class="menu-list wrap" style="margin-top:0">
+            <div><dt>Hauptgerichte</dt><dd>warm, frisch gekocht<span class="sub">zum Beispiel gegrillte Sandwiches mit Salat oder Pommes</span></dd></div>
+            <div><dt>Getränke</dt><dd>kalt und warm<span class="sub">Limonaden, Kaffee und andere Heißgetränke</span></dd></div>
+            <div><dt>Kaffee &amp; Kuchen</dt><dd>den ganzen Abend<span class="sub">gern auch einfach auf ein Stück Kuchen</span></dd></div>
+            <div><dt>Specials</dt><dd>wechselnd<span class="sub">immer wieder etwas Neues zum Probieren</span></dd></div>
+          </dl>
         </div>
       </div>
     </section>
 
-    <section class="section section-tint" id="spende">
-      <div class="container split reverse">
-        <div class="arch-wrap">
-          <div class="frame">
-            <div class="arch arch-tall">
-              <img src="assets/img/theke-getraenke.jpeg" width="1200" height="1600" loading="lazy"
-                   alt="Zwei Limonaden mit Zuckerrand, Zitrone und Minze vor der Theke, daneben die Menükarte mit dem Café-Manna-Logo.">
-            </div>
+    <section class="section on-dark" id="spende">
+      <div class="container grid">
+        <div class="split-a reveal" style="grid-column:1 / span 5">
+          <div class="img arch ratio-tall">
+            <img src="assets/img/theke-getraenke.jpeg" width="1200" height="1600" loading="lazy"
+                 alt="Zwei Limonaden mit Zuckerrand, Zitrone und Minze vor der Theke mit goldenen Hängelampen.">
           </div>
         </div>
-        <div>
-          <span class="label">Bezahlen</span>
-          <h2>Bezahlen mit einer Spende</h2>
-          <p>Auf unserer Karte findest du keine Preise. Am Ende des Abends gibst du eine Spende in der Höhe, die du für angemessen hältst.</p>
+        <div class="split-b reveal reveal-d1" style="grid-column:7 / span 6">
+          <span class="eyebrow"><span class="num">02</span>Bezahlen</span>
+          <h2 class="h2">Bezahlen mit einer <em>Spende</em></h2>
+          <p class="lead" style="margin-top:24px">Auf unserer Karte findest du keine Preise. Am Ende des Abends gibst du eine Spende in der Höhe, die du für angemessen hältst.</p>
           <p class="muted">Davon bezahlen wir zuerst die laufenden Kosten des Cafés. Alles, was darüber hinaus zusammenkommt, geht an das Hilfswerk CDH-Stephanus und unterstützt unter anderem unsere acht Patenkinder in Indien und Uganda.</p>
-          <a class="text-link" href="ueber-uns.html#spenden">Wohin das Geld geht</a>
+          <a class="link" href="ueber-uns.html#spenden">Wohin das Geld geht</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section band">
+      <div class="container inner reveal">
+        <h2 class="h2">Reservier dir einen Tisch</h2>
+        <p class="lead">Am Wochenende wird es bei uns oft voll, deshalb lohnt sich eine Reservierung.</p>
+        <div class="btn-row">
+          <a class="btn btn-solid" href="reservieren.html">Tisch reservieren</a>
         </div>
       </div>
     </section>

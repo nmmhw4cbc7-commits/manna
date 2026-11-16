@@ -1,27 +1,45 @@
-/* Café Manna – kleine Helfer. Die Seite funktioniert auch ohne JavaScript. */
+/* Café Manna: kleine Helfer. Die Seite funktioniert auch ohne JavaScript. */
 (function () {
   "use strict";
+  var body = document.body;
 
-  /* ---------- Menü (mobil) ---------- */
+  /* Header beim Scrollen */
+  var onScroll = function () { body.classList.toggle("is-scrolled", window.scrollY > 24); };
+  onScroll();
+  window.addEventListener("scroll", onScroll, { passive: true });
+
+  /* Menü auf dem Handy */
   var toggle = document.querySelector(".nav-toggle");
-  var nav = document.getElementById("site-nav");
-  if (toggle && nav) {
+  var menu = document.getElementById("mobile-nav");
+  if (toggle && menu) {
     var setOpen = function (open) {
       toggle.setAttribute("aria-expanded", String(open));
       toggle.textContent = open ? "Schließen" : "Menü";
-      nav.classList.toggle("is-open", open);
-      document.body.classList.toggle("nav-open", open);
+      menu.hidden = !open;
+      body.classList.toggle("nav-open", open);
     };
-    toggle.addEventListener("click", function () { setOpen(toggle.getAttribute("aria-expanded") !== "true"); });
+    toggle.addEventListener("click", function () { setOpen(menu.hidden); });
     document.addEventListener("keydown", function (e) {
-      if (e.key === "Escape" && nav.classList.contains("is-open")) { setOpen(false); toggle.focus(); }
+      if (e.key === "Escape" && !menu.hidden) { setOpen(false); toggle.focus(); }
     });
-    window.matchMedia("(min-width: 901px)").addEventListener("change", function (m) { if (m.matches) setOpen(false); });
+    window.matchMedia("(min-width: 1001px)").addEventListener("change", function (m) { if (m.matches) setOpen(false); });
   }
 
-  /* ---------- Öffnungszeiten ----------
-     Regulär Freitag & Samstag, 18–23 Uhr (Europe/Berlin).
-     Zum Ändern nur HOURS anpassen (0 = Sonntag … 6 = Samstag). */
+  /* Sanftes Einblenden beim Scrollen */
+  var items = document.querySelectorAll(".reveal");
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { en.target.classList.add("is-in"); io.unobserve(en.target); }
+      });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
+    items.forEach(function (el) { io.observe(el); });
+  } else {
+    items.forEach(function (el) { el.classList.add("is-in"); });
+  }
+
+  /* Öffnungszeiten: Freitag und Samstag, 18 bis 23 Uhr (Europe/Berlin).
+     Zum Ändern nur HOURS anpassen (0 = Sonntag bis 6 = Samstag). */
   var HOURS = { 5: [18, 23], 6: [18, 23] };
   var DAYS = ["Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag"];
 
@@ -51,9 +69,7 @@
 
   var text = statusText();
   document.querySelectorAll("[data-status]").forEach(function (el) {
-    if (!text) return;
-    el.textContent = text;
-    el.hidden = false;
+    if (text) { el.textContent = text; el.hidden = false; }
   });
 
   var today = berlinNow().day;

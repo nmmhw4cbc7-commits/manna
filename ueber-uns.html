@@ -6,23 +6,25 @@
   <title>Über uns · Café Manna Speyer</title>
   <meta name="description" content="Café Manna wird ehrenamtlich vom gemeinnützigen Verein Café Manna e.V. betrieben. Die Spenden gehen an das Christliche Diakonische Hilfswerk Stephanus.">
   <meta name="theme-color" content="#f0ede7">
-  <link rel="preload" href="assets/fonts/bodoni-moda-latin-400-italic.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="assets/fonts/jost-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <meta property="og:title" content="Über uns · Café Manna Speyer">
   <meta property="og:description" content="Café Manna wird ehrenamtlich vom gemeinnützigen Verein Café Manna e.V. betrieben. Die Spenden gehen an das Christliche Diakonische Hilfswerk Stephanus.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="de_DE">
-  <meta property="og:image" content="assets/img/innen-2.jpg">
+  <meta property="og:image" content="assets/img/raum-breit.jpg">
   <link rel="icon" href="assets/img/logo-mark.png" type="image/png">
   <link rel="apple-touch-icon" href="assets/img/logo-mark.png">
+  <link rel="preload" href="assets/fonts/bodoni-moda-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/bodoni-moda-latin-400-italic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/jost-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add("js");</script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "CafeOrCoffeeShop",
     "name": "Café Manna",
     "slogan": "Wo Genuss Gutes tut.",
-    "description": "Ehrenamtlich betriebenes Abendcafé in Speyer. Warme Gerichte, Kaffee und Kuchen gegen Spende.",
+    "description": "Ehrenamtlich betriebenes Abendcafé in Speyer mit warmen Gerichten, Kaffee und Kuchen auf Spendenbasis.",
     "address": { "@type": "PostalAddress", "streetAddress": "Boschstraße 26", "postalCode": "67346", "addressLocality": "Speyer", "addressCountry": "DE" },
     "telephone": "+4915754260456",
     "openingHoursSpecification": [{ "@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday", "Saturday"], "opens": "18:00", "closes": "23:00" }],
@@ -35,109 +37,145 @@
   <a class="skip-link" href="#main">Zum Inhalt springen</a>
 
   <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html" aria-label="Café Manna, zur Startseite">
-        <img src="assets/img/logo-mark.png" width="480" height="480" alt="Café Manna">
-      </a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menü</button>
-      <nav id="site-nav" class="site-nav" aria-label="Hauptnavigation">
-        <ul class="nav-list">
+    <div class="header-inner">
+      <nav class="nav-side nav-left" aria-label="Hauptnavigation">
+        <ul>
           <li><a href="besuch.html">Besuch</a></li>
           <li><a href="essen.html">Essen &amp; Trinken</a></li>
           <li><a href="abende.html">Abende</a></li>
-          <li><a href="ueber-uns.html" aria-current="page">Über uns</a></li>
-          <li class="nav-cta"><a href="reservieren.html">Reservieren</a></li>
         </ul>
       </nav>
+      <a class="brand" href="index.html" aria-label="Café Manna, zur Startseite">
+        <img src="assets/img/logo-mark.png" width="480" height="480" alt="Café Manna">
+      </a>
+      <nav class="nav-side nav-right" aria-label="Weitere Navigation">
+        <ul>
+          <li><a href="ueber-uns.html" aria-current="page">Über uns</a></li>
+          <li><a class="nav-cta" href="reservieren.html">Reservieren</a></li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav">Menü</button>
     </div>
   </header>
 
+  <div class="mobile-nav" id="mobile-nav" hidden>
+    <ul>
+      <li><a href="index.html">Start</a></li>
+      <li><a href="besuch.html">Besuch</a></li>
+      <li><a href="essen.html">Essen &amp; Trinken</a></li>
+      <li><a href="abende.html">Abende</a></li>
+      <li><a href="ueber-uns.html" aria-current="page">Über uns</a></li>
+    </ul>
+    <a class="btn btn-solid" href="reservieren.html">Tisch reservieren</a>
+    <p class="mobile-nav-info">Freitag und Samstag, 18 bis 23 Uhr<br>Boschstraße 26, 67346 Speyer</p>
+  </div>
+
   <main id="main">
 <section class="page-head">
-      <div class="container">
-        <span class="label">Café Manna e.V.</span>
-        <h1>Über uns</h1>
-        <p class="lead">Café Manna ist ein besonderer Ort der Begegnung, an dem man Gemeinschaft erleben und Menschen in Not unterstützen kann.</p>
+      <div class="container grid">
+        <div class="title-col reveal">
+          <span class="eyebrow">Café Manna e.V.</span>
+          <h1 class="d2">Über uns</h1>
+        </div>
+        <div class="lead-col reveal reveal-d1">
+          <p class="lead">Café Manna ist ein besonderer Ort der Begegnung, an dem man Gemeinschaft erleben und Menschen in Not unterstützen kann.</p>
+        </div>
       </div>
     </section>
 
+    <div class="container banner reveal">
+      <div class="img">
+        <img src="assets/img/bank-breit.jpg" width="960" height="560" style="object-position:50% 60%"
+             alt="Die lange Sitzbank mit Kissen unter den beleuchteten Wandbögen.">
+      </div>
+    </div>
+
     <section class="section" style="padding-top:0">
-      <div class="container split">
-        <div class="arch-wrap">
-          <div class="frame">
-            <div class="arch arch-tall">
-              <img src="assets/img/innen-2.jpg" width="960" height="1280" loading="lazy"
-                   alt="Die lange Sitzbank unter den beleuchteten Wandbögen.">
-            </div>
-          </div>
+      <div class="container grid">
+        <div class="reveal" style="grid-column:1 / span 4">
+          <span class="eyebrow"><span class="num">01</span>Der Verein</span>
+          <h2 class="h2">Wer wir sind</h2>
         </div>
-        <div>
-          <span class="label">Der Verein</span>
-          <h2>Café Manna e.V.</h2>
-          <p>Hinter dem Café steht der gemeinnützige Verein Café Manna e.V. Wir sind Ehrenamtliche aus der Gemeinde in Speyer und aus Schwegenheim und kümmern uns gemeinsam um Küche, Service und Theke.</p>
+        <div class="two-col reveal reveal-d1" style="grid-column:6 / span 7">
+          <p class="lead">Hinter dem Café steht der gemeinnützige Verein Café Manna e.V. Wir sind Ehrenamtliche aus der Gemeinde in Speyer und aus Schwegenheim und kümmern uns gemeinsam um Küche, Service und Theke.</p>
           <p class="muted">Das Café liegt im Gebäude des CDH-Stephanus e.V. in der Boschstraße. Wir wünschen uns einen Ort, an dem Menschen zusammenkommen, gut essen und dabei anderen helfen. Ganz besonders freuen wir uns über Gäste, die uns noch nicht kennen.</p>
         </div>
       </div>
     </section>
 
-    <section class="section section-tint" id="spenden">
-      <div class="container">
-        <div class="center narrow" style="margin:0 auto clamp(40px,6vw,72px)">
-          <span class="label">Wohin die Spenden gehen</span>
-          <h2>Christliches Diakonisches Hilfswerk Stephanus</h2>
-          <p class="lead">Was nach den laufenden Kosten übrig bleibt, geht vollständig an das CDH-Stephanus.</p>
+    <section class="section on-dark story" id="spenden">
+      <div class="container grid">
+        <div class="img-col reveal">
+          <figure>
+            <div class="frame">
+              <div class="img ratio-tall">
+                <img src="assets/img/wand-portraits.jpg" width="430" height="560" loading="lazy"
+                     alt="Acht gerahmte Porträts von Kindern an der Wand des Cafés.">
+              </div>
+            </div>
+            <figcaption>Unsere acht Patenkinder aus Indien und Uganda</figcaption>
+          </figure>
         </div>
-        <div class="columns columns-2">
-          <div>
-            <h3>Das Hilfswerk</h3>
-            <p>Das CDH-Stephanus e.V. hat seinen Sitz im selben Gebäude wie das Café und hilft seit 1988 Menschen in Not. Heute unterstützt es Projekte unter anderem in der Ukraine, in Uganda, Indien, Sri Lanka, Äthiopien, Lettland und Moldawien.</p>
-            <p style="margin-top:1rem"><a class="text-link" href="https://cdh-stephanus.org" rel="noopener">cdh-stephanus.org</a></p>
-          </div>
-          <div>
-            <h3>Acht Patenschaften</h3>
-            <p>Als Café haben wir Patenschaften für vier Kinder in Indien und vier Kinder und Jugendliche in Uganda übernommen. Ihre Porträts hängen bei uns im Gastraum.</p>
+        <div class="text-col reveal reveal-d1">
+          <span class="eyebrow"><span class="num">02</span>Wohin die Spenden gehen</span>
+          <h2 class="h2">Christliches Diakonisches Hilfswerk <em>Stephanus</em></h2>
+          <p class="lead" style="margin-top:24px">Was nach den laufenden Kosten übrig bleibt, geht vollständig an das CDH-Stephanus.</p>
+          <div class="cols-2" style="margin-top:40px">
+            <div>
+              <h3 class="h4">Das Hilfswerk</h3>
+              <p>Das CDH-Stephanus e.V. hat seinen Sitz im selben Gebäude wie das Café und hilft seit 1988 Menschen in Not. Heute unterstützt es Projekte unter anderem in der Ukraine, in Uganda, Indien, Sri Lanka, Äthiopien, Lettland und Moldawien.</p>
+              <a class="link" href="https://cdh-stephanus.org" rel="noopener">cdh-stephanus.org</a>
+            </div>
+            <div>
+              <h3 class="h4">Acht Patenschaften</h3>
+              <p>Als Café haben wir Patenschaften für vier Kinder in Indien und vier Kinder und Jugendliche in Uganda übernommen. Ihre Porträts hängen bei uns im Gastraum.</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <section class="section">
-      <div class="container narrow center">
-        <span class="label">Der Name</span>
-        <h2>Warum „Manna“?</h2>
-        <p class="muted">Manna ist in der Bibel das Brot, mit dem Gott das Volk Israel in der Wüste versorgt. Im Johannesevangelium greift Jesus dieses Bild auf und nennt sich selbst das Brot des Lebens. Davon hat unser Café seinen Namen.</p>
-        <hr class="ornament">
-        <blockquote class="quote">
-          „Ich bin das Brot des Lebens. Wer zu mir kommt, den wird nicht hungern.“
-          <cite>Johannes 6,35</cite>
-        </blockquote>
+      <div class="container grid">
+        <div class="reveal" style="grid-column:1 / span 4">
+          <span class="eyebrow"><span class="num">03</span>Der Name</span>
+          <h2 class="h2">Warum „Manna“</h2>
+          <p class="muted" style="margin-top:24px">Manna ist in der Bibel das Brot, mit dem Gott das Volk Israel in der Wüste versorgt. Im Johannesevangelium greift Jesus dieses Bild auf und nennt sich selbst das Brot des Lebens. Davon hat unser Café seinen Namen.</p>
+        </div>
+        <div class="reveal reveal-d1" style="grid-column:6 / span 7; align-self:center">
+          <blockquote class="quote">„Ich bin das Brot des Lebens. Wer zu mir kommt, den wird nicht hungern.“
+            <cite>Johannes 6,35</cite>
+          </blockquote>
+        </div>
       </div>
     </section>
 
-    <section class="section section-tint">
-      <div class="container narrow">
-        <div class="center" style="margin-bottom:2.5rem">
-          <span class="label">Geschichte</span>
-          <h2>Vom Konferenzraum zum Café</h2>
+    <section class="section section-tint" id="geschichte">
+      <div class="container grid">
+        <div class="reveal" style="grid-column:1 / span 4">
+          <span class="eyebrow"><span class="num">04</span>Geschichte</span>
+          <h2 class="h2">Vom Konferenzraum zum Café</h2>
+          <figure style="margin-top:40px">
+            <div class="img ratio-land">
+              <img src="assets/img/vorher-konferenzraum.jpg" width="1000" height="669" loading="lazy"
+                   alt="Der frühere Konferenzraum mit hellen Wänden und vielen Reihen grauer Stühle.">
+            </div>
+            <figcaption>So sah der Raum aus, bevor daraus das Café wurde</figcaption>
+          </figure>
         </div>
-        <ol class="timeline">
+        <ol class="timeline reveal reveal-d1" style="grid-column:6 / span 7; align-self:start">
           <li><time>1988</time><span>Das Hilfswerk Stephanus beginnt seine Arbeit für Menschen in Not.</span></li>
           <li><time>2008</time><span>Aus einem alten Lagerraum wird ein Konferenzraum für Mitgliederversammlungen.</span></li>
           <li><time>Dezember 2021</time><span>Im Konferenzraum wird ein Corona-Testzentrum eingerichtet.</span></li>
           <li><time>Sommer 2023</time><span>Ehrenamtliche aus der Gemeinde übernehmen den Raum und bauen ihn zum Café um.</span></li>
           <li><time>September 2023</time><span>Café Manna öffnet und ist seitdem freitags und samstags von 18 bis 23 Uhr für dich da.</span></li>
         </ol>
-        <figure class="before">
-          <img src="assets/img/vorher-konferenzraum.jpg" width="1000" height="669" loading="lazy"
-               alt="Der frühere Konferenzraum: helle Wände und viele Reihen grauer Stühle.">
-          <figcaption>So sah der Konferenzraum aus, bevor daraus das Café wurde.</figcaption>
-        </figure>
       </div>
     </section>
 
     <section class="section band">
-      <div class="container narrow center">
-        <h2>Du hast Fragen an uns?</h2>
+      <div class="container inner reveal">
+        <h2 class="h2">Du hast Fragen an uns?</h2>
         <p class="lead">Am schnellsten erreichst du uns per Telefon oder über WhatsApp.</p>
         <div class="btn-row">
           <a class="btn btn-solid" href="tel:+4915754260456">0157 54260456</a>
@@ -149,36 +187,41 @@
 
   <footer class="site-footer">
     <div class="container">
-      <img class="logo" src="assets/img/logo-mark.png" width="480" height="480" alt="Café Manna" loading="lazy">
-      <p class="footer-slogan">Wo Genuss Gutes tut.</p>
-      <div class="footer-cols">
-        <div>
-          <h2>Adresse</h2>
-          <address>Boschstraße 26<br>67346 Speyer</address>
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="assets/img/logo-mark.png" width="480" height="480" alt="Café Manna" loading="lazy">
+          <p class="footer-slogan">Wo Genuss Gutes tut.</p>
         </div>
-        <div>
-          <h2>Geöffnet</h2>
-          <p style="margin:0">Freitag und Samstag<br>18 bis 23 Uhr</p>
-        </div>
-        <div>
-          <h2>Kontakt</h2>
-          <ul>
-            <li><a href="tel:+4915754260456">0157 54260456</a></li>
-            <li><a href="https://wa.me/4915754260456" rel="noopener">WhatsApp</a> · <a href="https://t.me/cafemanna" rel="noopener">Telegram</a></li>
-            <li><a href="https://instagram.com/cafemanna.ev" rel="noopener">@cafemanna.ev</a></li>
-          </ul>
+        <div class="footer-cols">
+          <div>
+            <h2>Besuch</h2>
+            <address>Boschstraße 26<br>67346 Speyer</address>
+            <p>Freitag und Samstag<br>18 bis 23 Uhr</p>
+          </div>
+          <div>
+            <h2>Kontakt</h2>
+            <ul>
+              <li><a href="tel:+4915754260456">0157 54260456</a></li>
+              <li><a href="https://wa.me/4915754260456" rel="noopener">WhatsApp</a></li>
+              <li><a href="https://t.me/cafemanna" rel="noopener">Telegram-Infokanal</a></li>
+              <li><a href="https://instagram.com/cafemanna.ev" rel="noopener">Instagram</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2>Seiten</h2>
+            <ul>
+              <li><a href="besuch.html">Besuch</a></li>
+              <li><a href="essen.html">Essen &amp; Trinken</a></li>
+              <li><a href="abende.html">Abende</a></li>
+              <li><a href="ueber-uns.html">Über uns</a></li>
+              <li><a href="reservieren.html">Reservieren</a></li>
+            </ul>
+          </div>
         </div>
       </div>
-      <ul class="footer-nav">
-        <li><a href="besuch.html">Besuch</a></li>
-        <li><a href="essen.html">Essen &amp; Trinken</a></li>
-        <li><a href="abende.html">Abende</a></li>
-        <li><a href="ueber-uns.html">Über uns</a></li>
-        <li><a href="reservieren.html">Reservieren</a></li>
-      </ul>
       <div class="footer-bottom">
-        <span>© <span data-year>2026</span> Café Manna e.V. · ehrenamtlich betrieben</span>
-        <span><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></span>
+        <span>© <span data-year>2026</span> Café Manna e.V., ehrenamtlich betrieben im Gebäude des CDH-Stephanus e.V.</span>
+        <span class="footer-legal"><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></span>
       </div>
     </div>
   </footer>

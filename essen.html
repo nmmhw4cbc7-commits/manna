@@ -6,23 +6,25 @@
   <title>Essen & Trinken · Café Manna Speyer</title>
   <meta name="description" content="Im Café Manna in Speyer gibt es warme Gerichte, Getränke, Kaffee und Kuchen, und bezahlt wird mit einer Spende.">
   <meta name="theme-color" content="#f0ede7">
-  <link rel="preload" href="assets/fonts/bodoni-moda-latin-400-italic.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="assets/fonts/jost-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <meta property="og:title" content="Essen & Trinken · Café Manna Speyer">
   <meta property="og:description" content="Im Café Manna in Speyer gibt es warme Gerichte, Getränke, Kaffee und Kuchen, und bezahlt wird mit einer Spende.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="de_DE">
-  <meta property="og:image" content="assets/img/innen-2.jpg">
+  <meta property="og:image" content="assets/img/raum-breit.jpg">
   <link rel="icon" href="assets/img/logo-mark.png" type="image/png">
   <link rel="apple-touch-icon" href="assets/img/logo-mark.png">
+  <link rel="preload" href="assets/fonts/bodoni-moda-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/bodoni-moda-latin-400-italic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/jost-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add("js");</script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "CafeOrCoffeeShop",
     "name": "Café Manna",
     "slogan": "Wo Genuss Gutes tut.",
-    "description": "Ehrenamtlich betriebenes Abendcafé in Speyer. Warme Gerichte, Kaffee und Kuchen gegen Spende.",
+    "description": "Ehrenamtlich betriebenes Abendcafé in Speyer mit warmen Gerichten, Kaffee und Kuchen auf Spendenbasis.",
     "address": { "@type": "PostalAddress", "streetAddress": "Boschstraße 26", "postalCode": "67346", "addressLocality": "Speyer", "addressCountry": "DE" },
     "telephone": "+4915754260456",
     "openingHoursSpecification": [{ "@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday", "Saturday"], "opens": "18:00", "closes": "23:00" }],
@@ -35,76 +37,101 @@
   <a class="skip-link" href="#main">Zum Inhalt springen</a>
 
   <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html" aria-label="Café Manna, zur Startseite">
-        <img src="assets/img/logo-mark.png" width="480" height="480" alt="Café Manna">
-      </a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menü</button>
-      <nav id="site-nav" class="site-nav" aria-label="Hauptnavigation">
-        <ul class="nav-list">
+    <div class="header-inner">
+      <nav class="nav-side nav-left" aria-label="Hauptnavigation">
+        <ul>
           <li><a href="besuch.html">Besuch</a></li>
           <li><a href="essen.html" aria-current="page">Essen &amp; Trinken</a></li>
           <li><a href="abende.html">Abende</a></li>
-          <li><a href="ueber-uns.html">Über uns</a></li>
-          <li class="nav-cta"><a href="reservieren.html">Reservieren</a></li>
         </ul>
       </nav>
+      <a class="brand" href="index.html" aria-label="Café Manna, zur Startseite">
+        <img src="assets/img/logo-mark.png" width="480" height="480" alt="Café Manna">
+      </a>
+      <nav class="nav-side nav-right" aria-label="Weitere Navigation">
+        <ul>
+          <li><a href="ueber-uns.html">Über uns</a></li>
+          <li><a class="nav-cta" href="reservieren.html">Reservieren</a></li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav">Menü</button>
     </div>
   </header>
 
+  <div class="mobile-nav" id="mobile-nav" hidden>
+    <ul>
+      <li><a href="index.html">Start</a></li>
+      <li><a href="besuch.html">Besuch</a></li>
+      <li><a href="essen.html" aria-current="page">Essen &amp; Trinken</a></li>
+      <li><a href="abende.html">Abende</a></li>
+      <li><a href="ueber-uns.html">Über uns</a></li>
+    </ul>
+    <a class="btn btn-solid" href="reservieren.html">Tisch reservieren</a>
+    <p class="mobile-nav-info">Freitag und Samstag, 18 bis 23 Uhr<br>Boschstraße 26, 67346 Speyer</p>
+  </div>
+
   <main id="main">
 <section class="page-head">
-      <div class="container">
-        <span class="label">Unsere Küche</span>
-        <h1>Essen &amp; Trinken</h1>
-        <p class="lead">Bei uns erwarten dich leckere Gerichte, die frisch und mit viel Liebe zubereitet werden. Dazu gibt es kalte und warme Getränke, Kaffee und Kuchen.</p>
+      <div class="container grid">
+        <div class="title-col reveal">
+          <span class="eyebrow">Unsere Küche</span>
+          <h1 class="d2">Essen &amp; Trinken</h1>
+        </div>
+        <div class="lead-col reveal reveal-d1">
+          <p class="lead">Bei uns erwarten dich leckere Gerichte, die frisch und mit viel Liebe zubereitet werden. Dazu gibt es kalte und warme Getränke, Kaffee und Kuchen.</p>
+        </div>
       </div>
     </section>
+
+    <div class="container banner reveal">
+      <div class="img">
+        <img src="assets/img/raum-gross.webp" width="1280" height="853" style="object-position:50% 62%"
+             alt="Zwei Teller mit gegrillten Sandwiches, Pommes und einer Schale buntem Salat.">
+      </div>
+    </div>
 
     <section class="section" style="padding-top:0">
-      <div class="container split">
-        <div class="arch-wrap">
-          <div class="arch arch-tall">
-            <img src="assets/img/raum-gross.webp" width="1280" height="853"
-                 alt="Zwei Teller: ein gegrilltes Sandwich mit Pommes und ein Vollkorn-Sandwich mit Ei und Salat, dahinter eine Schale mit buntem Salat." style="object-position:72% 50%">
-          </div>
+      <div class="container grid">
+        <div class="reveal" style="grid-column:1 / span 4">
+          <span class="eyebrow"><span class="num">01</span>Die Karte</span>
+          <h2 class="h2">Was es bei uns gibt</h2>
+          <p class="muted" style="margin-top:20px">Unsere Karte wechselt, und die aktuelle findest du abends bei dir am Tisch.</p>
         </div>
-        <div>
-          <span class="label">Die Karte</span>
-          <h2>Was es gibt</h2>
-          <div class="menu-list">
-            <div><span class="k">Hauptgerichte</span><span class="dots" aria-hidden="true"></span><span class="v">warm</span></div>
-          </div>
-          <p class="muted small" style="margin-top:-4px">Zum Beispiel gegrillte Sandwiches mit Salat oder Pommes.</p>
-          <div class="menu-list">
-            <div><span class="k">Getränke</span><span class="dots" aria-hidden="true"></span><span class="v">kalt und warm</span></div>
-          </div>
-          <p class="muted small" style="margin-top:-4px">Limonaden, Kaffee und andere Heißgetränke.</p>
-          <div class="menu-list">
-            <div><span class="k">Kaffee &amp; Kuchen</span><span class="dots" aria-hidden="true"></span><span class="v">den ganzen Abend</span></div>
-          </div>
-          <p class="muted small" style="margin-top:-4px">Du bist auch gern einfach auf ein Stück Kuchen willkommen.</p>
-          <p class="note">Dazu kommen wechselnde Specials, und die aktuelle Karte findest du bei dir am Tisch.</p>
+        <div class="reveal reveal-d1" style="grid-column:6 / span 7">
+          <dl class="menu-list wrap" style="margin-top:0">
+            <div><dt>Hauptgerichte</dt><dd>warm, frisch gekocht<span class="sub">zum Beispiel gegrillte Sandwiches mit Salat oder Pommes</span></dd></div>
+            <div><dt>Getränke</dt><dd>kalt und warm<span class="sub">Limonaden, Kaffee und andere Heißgetränke</span></dd></div>
+            <div><dt>Kaffee &amp; Kuchen</dt><dd>den ganzen Abend<span class="sub">gern auch einfach auf ein Stück Kuchen</span></dd></div>
+            <div><dt>Specials</dt><dd>wechselnd<span class="sub">immer wieder etwas Neues zum Probieren</span></dd></div>
+          </dl>
         </div>
       </div>
     </section>
 
-    <section class="section section-tint" id="spende">
-      <div class="container split reverse">
-        <div class="arch-wrap">
-          <div class="frame">
-            <div class="arch arch-tall">
-              <img src="assets/img/theke-getraenke.jpeg" width="1200" height="1600" loading="lazy"
-                   alt="Zwei Limonaden mit Zuckerrand, Zitrone und Minze vor der Theke, daneben die Menükarte mit dem Café-Manna-Logo.">
-            </div>
+    <section class="section on-dark" id="spende">
+      <div class="container grid">
+        <div class="split-a reveal" style="grid-column:1 / span 5">
+          <div class="img arch ratio-tall">
+            <img src="assets/img/theke-getraenke.jpeg" width="1200" height="1600" loading="lazy"
+                 alt="Zwei Limonaden mit Zuckerrand, Zitrone und Minze vor der Theke mit goldenen Hängelampen.">
           </div>
         </div>
-        <div>
-          <span class="label">Bezahlen</span>
-          <h2>Bezahlen mit einer Spende</h2>
-          <p>Auf unserer Karte findest du keine Preise. Am Ende des Abends gibst du eine Spende in der Höhe, die du für angemessen hältst.</p>
+        <div class="split-b reveal reveal-d1" style="grid-column:7 / span 6">
+          <span class="eyebrow"><span class="num">02</span>Bezahlen</span>
+          <h2 class="h2">Bezahlen mit einer <em>Spende</em></h2>
+          <p class="lead" style="margin-top:24px">Auf unserer Karte findest du keine Preise. Am Ende des Abends gibst du eine Spende in der Höhe, die du für angemessen hältst.</p>
           <p class="muted">Davon bezahlen wir zuerst die laufenden Kosten des Cafés. Alles, was darüber hinaus zusammenkommt, geht an das Hilfswerk CDH-Stephanus und unterstützt unter anderem unsere acht Patenkinder in Indien und Uganda.</p>
-          <a class="text-link" href="ueber-uns.html#spenden">Wohin das Geld geht</a>
+          <a class="link" href="ueber-uns.html#spenden">Wohin das Geld geht</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section band">
+      <div class="container inner reveal">
+        <h2 class="h2">Reservier dir einen Tisch</h2>
+        <p class="lead">Am Wochenende wird es bei uns oft voll, deshalb lohnt sich eine Reservierung.</p>
+        <div class="btn-row">
+          <a class="btn btn-solid" href="reservieren.html">Tisch reservieren</a>
         </div>
       </div>
     </section>
@@ -112,36 +139,41 @@
 
   <footer class="site-footer">
     <div class="container">
-      <img class="logo" src="assets/img/logo-mark.png" width="480" height="480" alt="Café Manna" loading="lazy">
-      <p class="footer-slogan">Wo Genuss Gutes tut.</p>
-      <div class="footer-cols">
-        <div>
-          <h2>Adresse</h2>
-          <address>Boschstraße 26<br>67346 Speyer</address>
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="assets/img/logo-mark.png" width="480" height="480" alt="Café Manna" loading="lazy">
+          <p class="footer-slogan">Wo Genuss Gutes tut.</p>
         </div>
-        <div>
-          <h2>Geöffnet</h2>
-          <p style="margin:0">Freitag und Samstag<br>18 bis 23 Uhr</p>
-        </div>
-        <div>
-          <h2>Kontakt</h2>
-          <ul>
-            <li><a href="tel:+4915754260456">0157 54260456</a></li>
-            <li><a href="https://wa.me/4915754260456" rel="noopener">WhatsApp</a> · <a href="https://t.me/cafemanna" rel="noopener">Telegram</a></li>
-            <li><a href="https://instagram.com/cafemanna.ev" rel="noopener">@cafemanna.ev</a></li>
-          </ul>
+        <div class="footer-cols">
+          <div>
+            <h2>Besuch</h2>
+            <address>Boschstraße 26<br>67346 Speyer</address>
+            <p>Freitag und Samstag<br>18 bis 23 Uhr</p>
+          </div>
+          <div>
+            <h2>Kontakt</h2>
+            <ul>
+              <li><a href="tel:+4915754260456">0157 54260456</a></li>
+              <li><a href="https://wa.me/4915754260456" rel="noopener">WhatsApp</a></li>
+              <li><a href="https://t.me/cafemanna" rel="noopener">Telegram-Infokanal</a></li>
+              <li><a href="https://instagram.com/cafemanna.ev" rel="noopener">Instagram</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2>Seiten</h2>
+            <ul>
+              <li><a href="besuch.html">Besuch</a></li>
+              <li><a href="essen.html">Essen &amp; Trinken</a></li>
+              <li><a href="abende.html">Abende</a></li>
+              <li><a href="ueber-uns.html">Über uns</a></li>
+              <li><a href="reservieren.html">Reservieren</a></li>
+            </ul>
+          </div>
         </div>
       </div>
-      <ul class="footer-nav">
-        <li><a href="besuch.html">Besuch</a></li>
-        <li><a href="essen.html">Essen &amp; Trinken</a></li>
-        <li><a href="abende.html">Abende</a></li>
-        <li><a href="ueber-uns.html">Über uns</a></li>
-        <li><a href="reservieren.html">Reservieren</a></li>
-      </ul>
       <div class="footer-bottom">
-        <span>© <span data-year>2026</span> Café Manna e.V. · ehrenamtlich betrieben</span>
-        <span><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></span>
+        <span>© <span data-year>2026</span> Café Manna e.V., ehrenamtlich betrieben im Gebäude des CDH-Stephanus e.V.</span>
+        <span class="footer-legal"><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></span>
       </div>
     </div>
   </footer>
