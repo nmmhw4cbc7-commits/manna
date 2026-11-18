@@ -402,6 +402,19 @@ a.row:hover h3 { font-style: italic; }
 .option .btn { margin-top: auto; align-self: flex-start; }
 @media (max-width: 860px) { .options { grid-template-columns: 1fr; row-gap: 56px; } }
 
+/* Reservierung direkt auf der Seite */
+.res-layout { row-gap: 72px; align-items: start; }
+.res-form { grid-column: 1 / span 7; }
+.res-form .h3 { margin-bottom: 14px; }
+.res-form > .muted { max-width: 38em; margin-bottom: 32px; }
+.res-frame { border-top: 1px solid var(--ink); padding-top: 28px; }
+.res-frame iframe { display: block; width: 100%; height: 760px; border: 0; background: transparent; color-scheme: light; transition: height .25s var(--ease); }
+.res-fallback { margin-top: 20px; }
+.res-alt { grid-column: 9 / span 4; display: flex; flex-direction: column; gap: 56px; }
+.res-alt .option p { margin-bottom: 22px; }
+.res-alt .option p:last-child { margin-bottom: 0; }
+@media (max-width: 1000px) { .res-form, .res-alt { grid-column: 1 / -1; } }
+
 /* Rechtstexte */
 .prose { max-width: 720px; }
 .prose h2 { font-size: 1.6rem; margin: 2.4em 0 0.6em; }

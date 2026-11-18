@@ -41,7 +41,6 @@
   /* Öffnungszeiten: Freitag und Samstag, 18 bis 23 Uhr (Europe/Berlin).
      Zum Ändern nur HOURS anpassen (0 = Sonntag bis 6 = Samstag). */
   var HOURS = { 5: [18, 23], 6: [18, 23] };
-  var DAYS = ["Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag"];
 
   function berlinNow() {
     var parts = new Intl.DateTimeFormat("en-GB", {
@@ -60,10 +59,6 @@
     var t = HOURS[now.day];
     if (t && now.minutes >= t[0] * 60 && now.minutes < t[1] * 60) return "Jetzt geöffnet bis " + t[1] + " Uhr";
     if (t && now.minutes < t[0] * 60) return "Heute ab " + t[0] + " Uhr geöffnet";
-    for (var i = 1; i <= 7; i++) {
-      var d = (now.day + i) % 7;
-      if (HOURS[d]) return "Wieder geöffnet " + (i === 1 ? "morgen" : "am " + DAYS[d]) + " ab " + HOURS[d][0] + " Uhr";
-    }
     return "";
   }
 
@@ -78,4 +73,45 @@
   });
 
   document.querySelectorAll("[data-year]").forEach(function (el) { el.textContent = new Date().getFullYear(); });
+  /* Reservierungsformular (iframe von cafemanna-ev.de): Höhe anpassen und
+     melden, welcher Teil gerade sichtbar ist (für Hinweise und Dialoge). */
+  var resFrame = document.querySelector("iframe[data-reservation]");
+  if (resFrame && window.postMessage) {
+    var resOrigin = new URL(resFrame.src, location.href).origin;
+    var header = document.querySelector(".site-header");
+    var pending = false;
+    var sendViewport = function () {
+      pending = false;
+      if (!resFrame.contentWindow) return;
+      var r = resFrame.getBoundingClientRect();
+      var headerBottom = header ? Math.max(0, header.getBoundingClientRect().bottom) : 0;
+      var top = Math.max(0, headerBottom - r.top);
+      var bottom = Math.min(r.height, window.innerHeight - r.top);
+      if (bottom <= top) return;
+      resFrame.contentWindow.postMessage({ type: "manna-res:viewport", top: top, bottom: bottom }, resOrigin);
+    };
+    /* Lädt das Formular nicht, stattdessen den Link zur Online-Reservierung zeigen */
+    var resReady = false;
+    setTimeout(function () {
+      if (resReady) return;
+      var wrap = resFrame.parentNode;
+      wrap.hidden = true;
+      var fb = document.querySelector(".res-fallback");
+      if (fb) fb.innerHTML = '<a class="btn btn-solid" href="https://www.cafemanna-ev.de" rel="noopener">Online reservieren</a>';
+    }, 12000);
+    var queue = function () { if (!pending) { pending = true; requestAnimationFrame(sendViewport); } };
+    window.addEventListener("message", function (e) {
+      if (e.origin !== resOrigin || e.source !== resFrame.contentWindow || !e.data) return;
+      resReady = true;
+      if (e.data.type === "manna-res:height") {
+        var h = parseInt(e.data.height, 10);
+        if (h > 0 && h < 10000) resFrame.style.height = h + "px";
+        queue();
+      } else if (e.data.type === "manna-res:ready") {
+        queue();
+      }
+    });
+    window.addEventListener("scroll", queue, { passive: true });
+    window.addEventListener("resize", queue);
+  }
 })();

@@ -22,7 +22,7 @@ Statische Website (HTML/CSS/ein bisschen JS), keine Abhängigkeiten, keine Cooki
 | essen.html | Angebot, Spendenprinzip |
 | abende.html | Musik-, Info-, Themenabende |
 | ueber-uns.html | Verein, Hilfswerk, Name, Geschichte |
-| reservieren.html | Online / Telefon / WhatsApp |
+| reservieren.html | Reservierungsformular direkt eingebettet (iframe von cafemanna-ev.de/embed, Repo manna-res) + Telefon / WhatsApp |
 | impressum.html, datenschutz.html | Rechtliches |
 
 ## Quellen der Inhalte (Stand Recherche: 16.11.2026)
@@ -44,4 +44,3 @@ Statische Website (HTML/CSS/ein bisschen JS), keine Abhängigkeiten, keine Cooki
 6. Impressum: alter Platzhalter „HRB 12345 / Amtsgericht Musterstadt“ auf cafemanna-ev.de entfernen; welche E-Mail gilt – `verwaltung@` oder `info@`?
 7. Wer ist redaktionell verantwortlich für die neue Seite? Wo wird gehostet?
 8. Bessere/mehr Fotos (Theke, Außenansicht/Eingang, Essen, Abende)?
-9. Online-Reservierung später direkt in diese Seite integrieren?

@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Tisch reservieren · Café Manna Speyer</title>
-  <meta name="description" content="So reservierst du einen Tisch im Café Manna in Speyer, online, per Telefon oder über WhatsApp.">
+  <meta name="description" content="Reservier deinen Tisch im Café Manna in Speyer direkt online, per Telefon oder über WhatsApp.">
   <meta name="theme-color" content="#f0ede7">
   <meta property="og:title" content="Tisch reservieren · Café Manna Speyer">
-  <meta property="og:description" content="So reservierst du einen Tisch im Café Manna in Speyer, online, per Telefon oder über WhatsApp.">
+  <meta property="og:description" content="Reservier deinen Tisch im Café Manna in Speyer direkt online, per Telefon oder über WhatsApp.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="de_DE">
   <meta property="og:image" content="assets/img/raum-breit.jpg">
@@ -24,7 +24,7 @@
     "@type": "CafeOrCoffeeShop",
     "name": "Café Manna",
     "slogan": "Wo Genuss Gutes tut.",
-    "description": "Ehrenamtlich betriebenes Abendcafé in Speyer mit warmen Gerichten, Kaffee und Kuchen auf Spendenbasis.",
+    "description": "Café Manna in Speyer, ehrenamtlich betrieben, mit warmen Gerichten, Kaffee und Kuchen auf Spendenbasis.",
     "address": { "@type": "PostalAddress", "streetAddress": "Boschstraße 26", "postalCode": "67346", "addressLocality": "Speyer", "addressCountry": "DE" },
     "telephone": "+4915754260456",
     "openingHoursSpecification": [{ "@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday", "Saturday"], "opens": "18:00", "closes": "23:00" }],
@@ -85,25 +85,34 @@
     </section>
 
     <section class="section" style="padding-top:0">
-      <div class="container options reveal">
-        <div class="option">
-          <span class="n">i</span>
-          <h2 class="h3">Online</h2>
-          <p>Wähl Datum und Uhrzeit und trag deinen Namen und deine Handynummer ein. Per E-Mail bekommst du eine Bestätigung mit einem Link, über den du die Reservierung ändern oder stornieren kannst.</p>
-          <a class="btn btn-solid" href="https://www.cafemanna-ev.de" rel="noopener">Online reservieren</a>
+      <div class="container grid res-layout">
+        <div class="res-form reveal">
+          <h2 class="h3">Online reservieren</h2>
+          <p class="muted">Wähl Datum, Uhrzeit und Dauer und trag deine Kontaktdaten ein. Die Reservierung ist sofort fest. Per E-Mail bekommst du eine Bestätigung mit einem Link, über den du sie ändern oder stornieren kannst.</p>
+          <div class="res-frame">
+            <iframe data-reservation src="https://www.cafemanna-ev.de/embed" title="Formular zur Tischreservierung im Café Manna" allow="clipboard-write"></iframe>
+          </div>
+          <p class="small muted res-fallback">Das Formular lädt nicht? <a href="https://www.cafemanna-ev.de" rel="noopener">Hier direkt reservieren</a>.</p>
         </div>
-        <div class="option">
-          <span class="n">ii</span>
-          <h2 class="h3">Telefon</h2>
-          <p>Ruf uns an und sag uns, an welchem Abend, um wie viel Uhr und mit wie vielen Personen du kommst.</p>
-          <a class="btn btn-line" href="tel:+4915754260456">0157 54260456</a>
-        </div>
-        <div class="option">
-          <span class="n">iii</span>
-          <h2 class="h3">WhatsApp</h2>
-          <p>Schreib uns eine kurze Nachricht an dieselbe Nummer mit Datum, Uhrzeit, Personenzahl und deinem Namen.</p>
-          <a class="btn btn-line" href="https://wa.me/4915754260456?text=Hallo%2C%20ich%20m%C3%B6chte%20gern%20einen%20Tisch%20reservieren%3A%20" rel="noopener">Nachricht schreiben</a>
-        </div>
+        <aside class="res-alt reveal reveal-d1">
+          <div class="option">
+            <span class="n">i</span>
+            <h2 class="h3">Telefon</h2>
+            <p>Ruf uns an und sag uns, an welchem Abend, um wie viel Uhr und mit wie vielen Personen du kommst.</p>
+            <a class="btn btn-line" href="tel:+4915754260456">0157 54260456</a>
+          </div>
+          <div class="option">
+            <span class="n">ii</span>
+            <h2 class="h3">WhatsApp</h2>
+            <p>Schreib uns eine kurze Nachricht an dieselbe Nummer mit Datum, Uhrzeit, Personenzahl und deinem Namen.</p>
+            <a class="btn btn-line" href="https://wa.me/4915754260456?text=Hallo%2C%20ich%20m%C3%B6chte%20gern%20einen%20Tisch%20reservieren%3A%20" rel="noopener">Nachricht schreiben</a>
+          </div>
+          <div class="option">
+            <span class="n">iii</span>
+            <h2 class="h3">Gruppen</h2>
+            <p>Online geht es bis 25 Personen. Für größere Gruppen und Feiern meld dich am besten telefonisch.</p>
+          </div>
+        </aside>
       </div>
     </section>
 
