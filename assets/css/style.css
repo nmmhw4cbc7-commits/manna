@@ -273,10 +273,11 @@ figcaption::before { content: ""; width: 24px; height: 1px; background: currentC
 .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: var(--col-gap); }
 .intro .two-col { margin-top: clamp(36px, 4vw, 56px); padding-top: clamp(28px, 3vw, 40px); border-top: 1px solid var(--rule); }
 @media (max-width: 900px) { .two-col { grid-template-columns: 1fr; } }
-.intro .nische { margin-top: 32px; width: 100%; }
+.intro .two-col { align-items: start; }
+.intro .nische { margin-top: 0.4em; }
+.intro .nische img { width: 100%; height: auto; }
 @media (max-width: 900px) {
   .intro .eyebrow-col, .intro .body-col { grid-column: 1 / -1; }
-  .intro .nische { display: none; }
 }
 
 /* Split-Sektionen */
