@@ -309,7 +309,7 @@ figcaption::before { content: ""; width: 24px; height: 1px; background: currentC
 /* Espresso-Sektion mit Kennzahlen */
 .story .img-col { grid-column: 1 / span 5; }
 .story .text-col { grid-column: 7 / span 6; align-self: center; }
-.story .frame { padding: 0; border: 1px solid var(--rule-dark); }
+.story .frame { padding: 12px; border: 1px solid var(--rule-dark); }
 .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--col-gap); margin-top: clamp(40px, 5vw, 64px); padding-top: 32px; border-top: 1px solid var(--rule-dark); }
 .stat-num { display: block; font: italic 400 clamp(2.8rem, 4.6vw, 4rem)/1 var(--serif); color: var(--sage); margin-bottom: 12px; }
 .stat-text { font-size: 0.92rem; color: var(--on-dark-2); line-height: 1.5; }
